@@ -12,6 +12,11 @@ type Query {
     user(id: ID @eq): User @find
 
     books:[Book] @all
+    book(id: ID @eq): Book @find
+    booksByFeatured(featured: Boolean! @eq): [Book] @all
+
+    categories:[Category] @all
+    category(id: ID @eq): Category @find
 }
 
 type User {
@@ -26,6 +31,7 @@ type Book {
     id: ID!
     title: String!
     author: String!
+    featured: Boolean
     category: Category! @belongsTo
 }
 
