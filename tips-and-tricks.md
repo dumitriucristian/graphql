@@ -7,3 +7,5 @@ drop all tables and create all tables
 
 drop all tables and create all tables with seed         
 ```php artisan migrate:fresh --seed```
+
+###lighthouse
